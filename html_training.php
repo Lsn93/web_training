@@ -130,21 +130,80 @@
     </map>
     <!--Background image-->
     <div style="background-image: url('img/img_girl.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: cover;">
-    You can specify background images<br>
-    for any visible HTML element.<br>
-    In this example, the background image<br>
-    is specified for a div element.<br>
-    By default, the background-image<br>
-    will repeat itself in the direction(s)<br>
-    where it is smaller than the element<br>
-    where it is specified. (Try resizing the<br>
-    browser window to see how the<br>
-    background image behaves.
+      You can specify background images<br>
+      for any visible HTML element.<br>
+      In this example, the background image<br>
+      is specified for a div element.<br>
+      By default, the background-image<br>
+      will repeat itself in the direction(s)<br>
+      where it is smaller than the element<br>
+      where it is specified. (Try resizing the<br>
+      browser window to see how the<br>
+      background image behaves.
     </div>
+    <!--The HTML <picture> Element-->
+    <picture>
+      <source media="(min-width: 650px)" srcset="img/img_food.jpg">
+      <source media="(min-width: 465px)" srcset="img/img_car.jpg">
+      <img src="img/img_girl.jpg" style="width:auto;">
+    </picture>
+    <p>Resize the browser to see different versions of the picture loading at different viewport sizes.
+    The browser looks for the first source element where the media query matches the user's current viewport width,
+    and fetches the image specified in the srcset attribute.</p>
   </div>
 
+  <!--HTML Tables-->
+  <div>
+    <!--Each table row is defined with the <tr> tag. A table header is defined with the <th> tag. By default, table headings are bold and centered. A table data/cell is defined with the <td> tag.-->
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th> 
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+    </table>
+    <!--Cell that spanw two columns-->
+    <table>
+      <tr>
+        <th>Name</th>
+        <th colspan="2">Telephone</th>
+      </tr>
+      <tr>
+        <td>Bill Gates</td>
+        <td>55577854</td>
+        <td>55577855</td>
+      </tr>
+    </table>
+  </div>
 
-
+  <!--HTML Lists-->
+  <h2>An Unordered HTML List</h2>
+  <ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul>
+  <h2>An Ordered HTML List</h2>
+  <ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol>
 
 
 

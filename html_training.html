@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Title tag-->
     <title>My personal HTML training</title>
+    <style>
+        span.note {
+          font-size: 120%;
+          color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -228,7 +234,12 @@
     <!--HTML Block and Inline Elements-->
     <!--The DIV element is a block element, and will always start on a new line and take up the full width available (stretches out to the left and right as far as it can).-->
     <div style="border: 1px solid black">Hello World</div>
+    <p>This is an inline span <span style="border: 1px solid black">Hello World</span> element inside a paragraph.</p>
 
+    <!--HTML Classes-->
+    <h1>My <span class="note">Important</span> Heading</h1>
+    <p>This is some <span class="note">important</span> text.</p>
+    
 
 </body>
 

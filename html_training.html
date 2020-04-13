@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--HTML Heading tag-->
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Title tag-->
     <title>My personal HTML training</title>
+    <!--Style tag-->
     <style>
+        .cities {
+            background-color: black;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+        }
         span.note {
-          font-size: 120%;
-          color: red;
+            font-size: 120%;
+            color: red;
+        }
+        .city {
+            background-color: tomato;
+            color: white;
+            padding: 10px;
+        }
+        .main {
+            text-align: center;
+        }
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <!--Main menu link-->
-    <a href="index.php">Main menu</a>
+    <a href="index.php" id="M1">Main menu</a>
 
     <!--HTML Headings-->
     <!--Headings are defined with the <h1> to <h6> tags.
@@ -233,14 +253,96 @@
 
     <!--HTML Block and Inline Elements-->
     <!--The DIV element is a block element, and will always start on a new line and take up the full width available (stretches out to the left and right as far as it can).-->
-    <div style="border: 1px solid black">Hello World</div>
-    <p>This is an inline span <span style="border: 1px solid black">Hello World</span> element inside a paragraph.</p>
+    <div>
+        <div style="border: 1px solid black">Hello World</div>
+        <p>This is an inline span <span style="border: 1px solid black">Hello World</span> element inside a paragraph.</p>
+    </div>
 
     <!--HTML Classes-->
-    <h1>My <span class="note">Important</span> Heading</h1>
-    <p>This is some <span class="note">important</span> text.</p>
-    
+    <!--Select Elements With a Specific Class-->
+    <div>
+        <div class="cities">
+            <h2>London</h2>
+            <p>London is the capital of England.</p>
+            </div> 
+            
+            <div class="cities">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.</p>
+            </div>
+            
+            <div class="cities">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <h1>My <span class="note">Important</span> Heading</h1>
+        <p>This is some <span class="note">important</span> text.</p>
+        <!--Single class-->
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+        <h2 class="city">Paris</h2>
+        <p>Paris is the capital of France.</p>
+        <h2 class="city">Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+        <!--Multiple classes-->
+        <h2 class="city main">London</h2>
+        <h2 class="city">Paris</h2>
+        <h2 class="city">Tokyo</h2>
+        <!--Same Class, Different Tag-->
+        <h2 class="city">Paris</h2>
+        <p class="city">Paris is the capital of France.</p>
+        <!--Using The class Attribute in JavaScript-->
+        <button onclick="myFunction()">Hide city names</button>
+        <h2 class="city_js">London</h2>
+        <p>London is the capital of England.</p>
+        <h2 class="city_js">Paris</h2>
+        <p>Paris is the capital of France.</p>
+        <h2 class="city_js">Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
 
+    <!--HTML The id Attribute-->
+    <div>
+        <h1 id="myHeader">My Header</h1>
+        <!--Bookmarks with ID and Links-->
+        <p><a href="#M1">Jump to Main menu</a></p>
+        <p><a href="#h1">Jump to Headings</a></p>
+        <!--Using The id Attribute in JavaScript-->
+        <h1 id="myHeader2">Hello World!</h1>
+        <button onclick="displayResult()">Change text</button>
+    </div>
+
+    <!--HTML Iframes-->
+    <div>
+        <iframe src="https://www.trucoteca.com/" style="height:600px;width:800px;border:2px solid red;"></iframe>
+        <!--Iframe - Target for a Link-->
+        <iframe height="300px" width="100%" src="http://www.guiasnintendo.com/" name="iframe_a"></iframe>
+        <p><a href="html_training.html" target="iframe_a">Go to My personal HTML training</a></p>
+    </div>
+
+    <!--HTML JavaScript-->
+    <div>
+        <p id="demo"></p>
+        <button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+        <!--Use JavaScript to Change Text-->
+        <p id="demo2"></p>
+
+    </div>
+
+    <!--Scripts-->
+    <script>
+        function myFunction() {
+          var x = document.getElementsByClassName("city_js");
+          for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+        }
+        function displayResult() {
+            document.getElementById("myHeader2").innerHTML = "Have a nice day!";
+        }
+        document.getElementById("demo2").innerHTML = "Hello JavaScript!";
+    </script>
 </body>
-
 </html>
